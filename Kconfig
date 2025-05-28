@@ -1,0 +1,21 @@
+# SPDX-License-Identifier: Apache-2.0
+# Kconfig - Configuration options for the Shape Library
+# This file is part of the Zephyr project, licensed under the Apache License 2.0.
+# See the top-level LICENSE file for details.
+# Author: Alexandre Geraldo - alexandre.geraldo@sync-os.com
+
+config ZEPHYR_SHAPELIB_MODULE
+    bool
+
+config SHAPELIB
+    bool "Enable Shape Library"
+    depends on FS_FATFS
+    help
+      This option enables the Shape Library, which is a collection of
+      functions and data structures for working with geometric shapes.
+      It provides APIs for creating, manipulating, and rendering shapes
+      in Zephyr-based applications.
+
+if SHAPELIB
+
+endif
